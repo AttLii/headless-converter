@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Headless Plugin
  * Description:       A Wordpress plugin that converts frontend to JSON response
- * Version:           0.1
+ * Version:           1.0.0
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            Atte Liimatainen
