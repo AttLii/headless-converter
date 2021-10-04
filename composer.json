@@ -1,5 +1,6 @@
 {
 	"name": "attlii/headless-plugin",
+	"type": "wordpress-plugin",
 	"autoload": {
 		"psr-4": {
 			"HeadlessPlugin\\": "src/"

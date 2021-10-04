@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       Headless Plugin
  * Description:       Converts frontend to JSON response when request is done with certain conditions.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            Atte Liimatainen
