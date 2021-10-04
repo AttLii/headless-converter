@@ -1,0 +1,7 @@
+{
+  "plugins": [
+    "."
+  ],
+  "port": 9001,
+  "testsPort": 3000
+}
