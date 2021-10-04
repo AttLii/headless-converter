@@ -15,9 +15,35 @@ To enable JSON response, an environment needs to:
 
 After above steps have been made, make a request to a page with added [Authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication).
 
+## Modifying the output
+Plugin outputs current page's Post object or null. This can be modified using `headless-plugin-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
+
+```php
+/**
+ * Modifies Headless Plugin's output.
+ * 
+ * @param WPPost|null $post - Current template's post object 
+ */
+function modify_headless_plugin_output($post) {
+  if(is_404()) {
+    return "this block renders 404 page content";
+  } else if(is_page()) {
+    return "this block renders page post types content";
+  } else if (is_singular('post')) {
+    return "this block renders single post content";
+  } else if(is_home()) {
+    return "this block renders post archive";
+  } else {
+    return $post;
+  }
+}
+
+add_filter('headless-plugin-modify-data', 'modify_headless_plugin_output');
+```
+
 ### Examples
 
-Using fetch
+Get data using fetch
 ```javascript
 const username = "admin"
 const password = "1111 1111 1111 1111 1111"
@@ -30,7 +56,7 @@ const opts = {
 fetch(url, opts).then(r => r.json()).then(console.log)
 ```
 
-Using Axios
+Get data using axios
 ```javascript
 const axios = require("axios")
 
