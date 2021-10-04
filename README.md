@@ -11,7 +11,7 @@ After above steps have been made, make a request to a page with added [Authoriza
 ### Examples
 
 Using fetch 
-```javascript¨
+```javascript
 const username = "admin"
 const password = "s9VJ 096n UPtE bu6F zJEY Jh9H"
 const url = "http://localhost:3000/?page_id=2"
@@ -24,7 +24,7 @@ fetch(url, opts).then(r => r.json()).then(console.log)
 ```
 
 Using Axios
-```javascript¨
+```javascript
 const axios = require("axios")
 
 const username = "admin"
