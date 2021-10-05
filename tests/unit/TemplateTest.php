@@ -1,6 +1,6 @@
 <?php
 
-use HeadlessPlugin\Template;
+use HeadlessConverter\Template;
 
 final class TemplateTest extends \WP_Mock\Tools\TestCase {
 	public function setUp(): void {

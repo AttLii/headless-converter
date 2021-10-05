@@ -1,7 +1,7 @@
 <?php
-namespace HeadlessPlugin;
+namespace HeadlessConverter;
 
-use HeadlessPlugin\Template;
+use HeadlessConverter\Template;
 
 /**
  * Stop execution if not in Wordpress environment

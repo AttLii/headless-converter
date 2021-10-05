@@ -1,5 +1,5 @@
 <?php
-use HeadlessPlugin\Constants;
+use HeadlessConverter\Constants;
 
 /**
  * Stop execution if not in Wordpress environment
