@@ -1,6 +1,6 @@
 === Headless Plugin ===
 Contributors: attlii
-Tags: headless 
+Tags: headless, converter, json
 Requires at least: 5.6
 Tested up to: 5.8
 Stable tag: 1.0.1
@@ -28,11 +28,11 @@ Plugin outputs current page's Post object or null. This can be modified using `h
 
 `
 /**
- * Modifies Headless Plugin's output.
+ * Modifies Headless Converter plugin's output.
  * 
  * @param WPPost|null $post - Current template's post object 
  */
-function modify_headless_plugin_output($post) {
+function modify_headless-converter_output($post) {
   if(is_404()) {
     return "this block renders 404 page content";
   } else if(is_page()) {
@@ -46,7 +46,7 @@ function modify_headless_plugin_output($post) {
   }
 }
 
-add_filter('headless-plugin-modify-data', 'modify_headless_plugin_output');
+add_filter('headless-converter-modify-data', 'modify_headless-converter_output');
 `
 
 == Data fetching examples ==

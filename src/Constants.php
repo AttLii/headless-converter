@@ -1,5 +1,5 @@
 <?php
-namespace HeadlessPlugin;
+namespace HeadlessConverter;
 
 /**
  * Stop execution if not in Wordpress environment

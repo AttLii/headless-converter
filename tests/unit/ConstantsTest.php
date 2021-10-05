@@ -1,6 +1,6 @@
 <?php
 
-use HeadlessPlugin\Constants;
+use HeadlessConverter\Constants;
 
 final class ConstantsTest extends \WP_Mock\Tools\TestCase {
 	public function setUp(): void {

@@ -1,9 +1,9 @@
 {
-	"name": "attlii/headless-plugin",
+	"name": "attlii/headless-converter",
 	"type": "wordpress-plugin",
 	"autoload": {
 		"psr-4": {
-			"HeadlessPlugin\\": "src/"
+			"HeadlessConverter\\": "src/"
 		}
 	},
 	"authors": [

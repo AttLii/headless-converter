@@ -1,7 +1,7 @@
 <?php
 
-use HeadlessPlugin\App;
-use HeadlessPlugin\Template;
+use HeadlessConverter\App;
+use HeadlessConverter\Template;
 
 final class AppTest extends \WP_Mock\Tools\TestCase {
 	public function setUp(): void {

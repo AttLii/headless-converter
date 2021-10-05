@@ -1,7 +1,5 @@
 <?php
-namespace HeadlessPlugin;
-
-use \WP_User;
+namespace HeadlessConverter;
 
 /**
  * Stop execution if not in Wordpress environment
