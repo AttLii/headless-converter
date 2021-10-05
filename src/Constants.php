@@ -14,5 +14,5 @@ class Constants {
   /**
    * filter's name for modifying content before serving it
    */
-  const FILTER_MODIFY_DATA = "headless-plugin-modify-data";
+  const FILTER_MODIFY_DATA = "headless-converter-modify-data";
 }
