@@ -1,0 +1,12 @@
+/.git
+/.github
+/node_modules
+/tests
+.distignore
+.gitignore
+.wp-env.json
+.wp-env.json.sample
+composer.lock
+package.json
+phpunit.xml
+yarn.lock
