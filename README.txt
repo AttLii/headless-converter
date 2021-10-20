@@ -3,7 +3,7 @@ Contributors: attlii
 Tags: headless, converter, json
 Requires at least: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,14 @@ This plugin converts frontend to JSON which seems after above solution the best 
 - Create application password for a user with administrator role
 
 After above steps have been made, make a request to a page with added [Authorization header](https://en.wikipedia.org/wiki/Basic_access_authentication#Client_side). See data fetching examples at the end of this documentation for more help
+
+== Frequently Asked Questions ==
+
+= Application Password doesn't show up, even though I use Wordpress version 5.6 or newer. What do?  =
+
+This seems to be a feature that is opt-in on some environments. Following hook enables it.
+
+`add_filter( 'wp_is_application_passwords_available' , '__return_true' );`
 
 === Modifying the output ===
 Plugin outputs current page's Post object or null. This can be modified using `headless-plugin-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
