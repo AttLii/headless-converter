@@ -75,16 +75,17 @@ final class OutputTest extends \WP_Mock\Tools\TestCase {
 		$post = new WP_Post();
 		$post->ID = 1;
 		$post->post_title = "my title";
-
-		$altered_post = $post;
-		$altered_post->acf = [];
-		$altered_post->acf = ['custom_field' => 'hi'];
-
-		\WP_Mock::onFilter( 'headless-plugin-modify-data' )
+		
+		WP_Mock::onFilter( 'headless-converter-modify-data' )
 			->with( $post )
-			->reply( $altered_post );
+			->reply( array(
+				"title" => "my title",
+				"acf" => array(
+					"tag" => "foo"
+				)
+			) );
 
-		\WP_Mock::userFunction( 'get_queried_object', array(
+		WP_Mock::userFunction( 'get_queried_object', array(
 			'return' => $post
 		));
 
@@ -95,7 +96,12 @@ final class OutputTest extends \WP_Mock\Tools\TestCase {
     $this->assertEquals(
 			$result,
 			json_encode([
-				"data" => $altered_post
+				"data" => [
+					"title" => "my title",
+					"acf" => [
+						"tag" => "foo"
+					]
+				]
 			])
 		);
   }
