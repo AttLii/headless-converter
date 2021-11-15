@@ -4,7 +4,7 @@ use HeadlessConverter\Constants;
 /**
  * Stop execution if not in Wordpress environment
  */
-defined( 'WPINC' ) or die;
+defined( 'WPINC' ) || die;
 
 header( 'content-type: application/json' );
 

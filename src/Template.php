@@ -4,12 +4,13 @@ namespace HeadlessConverter;
 /**
  * Stop execution if not in Wordpress environment
  */
-defined( 'WPINC' ) or die;
+defined( 'WPINC' ) || die;
 
 /**
  * Class for adding Template related functionalities
  */
 class Template {
+
 	/**
 	 * Class constructor
 	 */
@@ -26,7 +27,9 @@ class Template {
 	}
 
 	/**
-	 * Overrides theme template with json output
+	 * Overrides theme template with json output.
+	 *
+	 * @throws \Exception If in unit testing environment, this seems to be the only way to test exit.
 	 */
 	public function override_template_with_json() {
 		$user_id = wp_validate_application_password( null );
