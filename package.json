@@ -1,6 +1,6 @@
 {
   "name": "headless-converter",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "GPL-2.0-or-later",
   "devDependencies": {
     "@wordpress/env": "^4.1.3"
