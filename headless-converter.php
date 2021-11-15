@@ -1,6 +1,7 @@
 <?php
 /**
  * Plugin Name:       Headless Converter
+ * Plugin URI:        https://github.com/AttLii/headless-converter
  * Description:       Converts frontend to JSON response when request is done with certain conditions.
  * Version:           1.0.2
  * Requires at least: 5.6
