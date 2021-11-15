@@ -4,44 +4,47 @@ namespace HeadlessConverter;
 /**
  * Stop execution if not in Wordpress environment
  */
-defined("WPINC") or die;
+defined( 'WPINC' ) || die;
 
 /**
  * Class for adding Template related functionalities
  */
 class Template {
-  /**
-   * Class constructor
-   */
-  public function __construct() {
-    $this->add_hooks();
-  }
 
-  /**
-   * Separate method for adding Wordpress hooks,   
-   */
-  public function add_hooks() {
-    add_filter( 'template_redirect', array( $this, 'override_template_with_json' ) );
-    add_filter( 'application_password_is_api_request', '__return_true' );
-  }
+	/**
+	 * Class constructor
+	 */
+	public function __construct() {
+		$this->add_hooks();
+	}
 
-  /**
-   * Overrides theme template with json output
-   */
-  public function override_template_with_json() {
-    $user_id = wp_validate_application_password(null);
+	/**
+	 * Separate method for adding Wordpress hooks,
+	 */
+	public function add_hooks() {
+		add_filter( 'template_redirect', array( $this, 'override_template_with_json' ) );
+		add_filter( 'application_password_is_api_request', '__return_true' );
+	}
 
-    if (
-      $user_id !== null &&
-      user_can($user_id, "manage_options")
-    ) {
-      include_once dirname(__FILE__) . '/output.php';
+	/**
+	 * Overrides theme template with json output.
+	 *
+	 * @throws \Exception If in unit testing environment, this seems to be the only way to test exit.
+	 */
+	public function override_template_with_json() {
+		$user_id = wp_validate_application_password( null );
 
-      if (defined('UNIT_TESTING')) {
-        throw new \Exception();
-      } else {
-        exit;
-      }
-    }
-  }
+		if (
+		$user_id !== null &&
+		user_can( $user_id, 'manage_options' )
+		) {
+			include_once dirname( __FILE__ ) . '/output.php';
+
+			if ( defined( 'UNIT_TESTING' ) ) {
+				throw new \Exception();
+			} else {
+				exit;
+			}
+		}
+	}
 }

@@ -15,8 +15,8 @@
 /**
  * Stop execution if not in Wordpress environment
  */
-defined("WPINC") or die;
+defined( 'WPINC' ) || die;
 
-include_once "vendor/autoload.php";
+include_once 'vendor/autoload.php';
 
 $app = new HeadlessConverter\App();
