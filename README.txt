@@ -32,7 +32,7 @@ This seems to be a feature that is opt-in on some environments. Following hook e
 `add_filter( 'wp_is_application_passwords_available' , '__return_true' );`
 
 === Modifying the output ===
-Plugin outputs current page's Post object or null. This can be modified using `headless-plugin-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
+Plugin outputs current page's Post object or null. This can be modified using `headless-converter-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
 
 `
 /**
