@@ -3,7 +3,7 @@ Contributors: attlii
 Tags: headless, converter, json
 Requires at least: 5.6
 Tested up to: 5.8
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -32,7 +32,7 @@ This seems to be a feature that is opt-in on some environments. Following hook e
 `add_filter( 'wp_is_application_passwords_available' , '__return_true' );`
 
 === Modifying the output ===
-Plugin outputs current page's Post object or null. This can be modified using `headless-plugin-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
+Plugin outputs current page's Post object or null. This can be modified using `headless-converter-modify-data`-filter. You can either modify passed in post object or do your own logic like in the example below.
 
 `
 /**
