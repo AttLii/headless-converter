@@ -19,5 +19,7 @@ final class AppTest extends \WP_Mock\Tools\TestCase {
 	public function testHasExpectedMembers() {
 		$app = new App();
 		$this->assertInstanceOf(Template::class, $app->template);
+
+		echo phpversion();
 	}
 }
