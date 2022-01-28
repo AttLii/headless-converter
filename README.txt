@@ -88,3 +88,27 @@ const opts = {
 
 axios(url, opts).then(r => r.data).then(console.log)
 `
+
+== Changelog ==
+
+= 1.0.0 (2020-10-08): =
+- Initial release
+
+= 1.0.1 (2020-10-08): =
+- Remove unnecessary stuff from the plugin folder
+
+= 1.0.2 (2020-10-20): =
+- Add FAQ about enabling application passwords
+
+= 1.0.3 (2020-11-15): =
+- Update and prune repository dependencies
+
+= 1.0.4 (2020-11-15): =
+- Run repository through a linter
+
+= 1.0.5 (2020-11-16): =
+- Fix documentation
+
+= 1.0.6 (2021-01-28): =
+- update tested up to version to 5.9
+
