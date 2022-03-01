@@ -112,3 +112,6 @@ axios(url, opts).then(r => r.data).then(console.log)
 = 1.0.6 (2021-01-28): =
 - update tested up to version to 5.9
 
+= 1.0.7 (2021-03-01): =
+- fix issue when the plugin is accidentally included in the same environment twice
+
