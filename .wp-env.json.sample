@@ -1,10 +1,15 @@
 {
   "plugins": [
     "."
-  ]
+  ],
 	"config": {
     "WP_DEBUG_LOG": true,
     "WP_DEBUG": true,
     "SCRIPT_DEBUG": true
-	}
+	},
+  "mappings": {
+    "wp-content/themes/example-theme": "./env/themes/example-theme",
+    "wp-content/mu-plugins/mu-loader.php": "./env/mu-plugins/mu-loader.php",
+    "wp-content/mu-plugins/headless-converter": "./"
+  }
 }
