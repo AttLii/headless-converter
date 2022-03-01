@@ -18,7 +18,7 @@
 defined( 'WPINC' ) || die;
 
 if ( ! class_exists( 'HeadlessConverter\App' ) ) {
-	include_once 'vendor/autoload.php';
+	require_once 'vendor/autoload.php';
 	$headless_converter_plugin = new HeadlessConverter\App();
 }
 
