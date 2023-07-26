@@ -115,3 +115,6 @@ axios(url, opts).then(r => r.data).then(console.log)
 = 1.0.7 (2021-03-01): =
 - fix issue when the plugin is accidentally included in the same environment twice
 
+= 1.0.8 (2021-07-26): =
+- Test and confirm that plugin works with PHP 8.1 and WP 6.3
+

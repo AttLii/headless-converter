@@ -35,7 +35,7 @@ class Template {
 		$user_id = wp_validate_application_password( null );
 
 		if ( $user_id !== null && user_can( $user_id, 'manage_options' ) ) {
-			require_once dirname( __FILE__ ) . '/output.php';
+			require_once __DIR__ . '/output.php';
 
 			if ( defined( 'UNIT_TESTING' ) ) {
 				throw new \Exception();
