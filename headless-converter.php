@@ -21,4 +21,3 @@ if ( ! class_exists( 'HeadlessConverter\App' ) ) {
 	require_once 'vendor/autoload.php';
 	$headless_converter_plugin = new HeadlessConverter\App();
 }
-
